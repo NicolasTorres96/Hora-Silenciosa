@@ -1,0 +1,5 @@
+C:\Users\Administrador\Source\Repos\HSpdv\HSpdv\HSpdv.Android\obj\Debug\403\MonoAndroid,Version=v4.0.3.AssemblyAttributes.cs
+C:\Users\Administrador\Source\Repos\HSpdv\HSpdv\HSpdv.Android\obj\Debug\403\HSpdv.Android.nuget.stamp
+C:\Users\Administrador\Source\Repos\HSpdv\HSpdv\HSpdv.Android\obj\Debug\403\HSpdv.Android.csprojAssemblyReference.cache
+C:\Users\Administrador\Source\Repos\HSpdv\HSpdv\HSpdv.Android\obj\Debug\403\libraryimports.cache.stamp
+C:\Users\Administrador\Source\Repos\HSpdv\HSpdv\HSpdv.Android\obj\Debug\403\res.flag
