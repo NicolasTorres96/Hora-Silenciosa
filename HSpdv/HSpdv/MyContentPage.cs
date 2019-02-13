@@ -19,7 +19,8 @@ namespace HSpdv
             };
             var btn = new Button
             {
-                Text = "Holi"
+                Text = "Holi",
+                BackgroundColor =Color.Green
             };
             btn.Clicked += (sender, e) =>
             {
