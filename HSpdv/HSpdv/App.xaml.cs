@@ -10,8 +10,7 @@ namespace HSpdv
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MyContentPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

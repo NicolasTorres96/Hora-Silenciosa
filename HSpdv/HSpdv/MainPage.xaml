@@ -4,11 +4,38 @@
              xmlns:local="clr-namespace:HSpdv"
              x:Class="HSpdv.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments ="Thickness">
+            <On Platform="Android" Value="0,0,0,0" />
+        </OnPlatform>
+
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+                <Label Text="Hora Silenciosa" FontSize="40" Font="Assets/FondyScript_PERSONAL_USE_ONLY.ttf" TextColor="Black"/>
+                
+            </StackLayout>
+            <Grid Grid.Row="1" Margin="30,-70,30,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />                    
+                </Grid.RowDefinitions>
+                <Image Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
 
 </ContentPage>
