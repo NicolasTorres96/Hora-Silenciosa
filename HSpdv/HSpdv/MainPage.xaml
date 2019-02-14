@@ -19,21 +19,23 @@
                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
-                <Label Text="Hora Silenciosa" FontSize="40" Font="Assets/FondyScript_PERSONAL_USE_ONLY.ttf" TextColor="Black"/>
                 
             </StackLayout>
-            <Grid Grid.Row="1" Margin="30,-70,30,0" >
+            <Grid Grid.Row="1" Margin="30,-120,30,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="90" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="40" />
-                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />                    
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />                    
                 </Grid.RowDefinitions>
                 <Image Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
+                <Entry x:Name="txtCorreo" Grid.Row="1" Placeholder="Correo Electrónico" Margin="0,40,0,0"></Entry>
+                <Entry x:Name="txtContra" Grid.Row="2" Placeholder="Contraseña" Margin="0,40,0,0" IsPassword="True"></Entry>
+                <Button Grid.Row="3" Text="Iniciar Sesión" BackgroundColor="#3897F0" Style="{StaticResource buttonStyle}" Clicked="IniciarSesion"/>
             </Grid>
         </Grid>
     </ContentPage.Content>
