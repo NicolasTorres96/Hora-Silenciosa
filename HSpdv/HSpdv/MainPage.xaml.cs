@@ -18,6 +18,12 @@ namespace HSpdv
             if (txtCorreo.Text == "Correo@correo.cl" && txtContra.Text == "1234")
             {
                 DisplayAlert("Mensaje", "Sesion Iniciada", "OK");
+                var nombre = txtCorreo.Text;
+                var user = new User
+                {
+                    nombre = nombre//, por si agrego algo mas
+                };
+                this.Navigation.PushModalAsync(new ListaHS(user));
             }
             else
             {
