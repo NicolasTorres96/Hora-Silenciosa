@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HSpdv.Registro">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments ="Thickness">
+            <On Platform="Android" Value="0,0,0,0" />
+        </OnPlatform>
+
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="logo.jpg" Aspect="AspectFill"></Image>
+            <BoxView Color="#70de8f" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry x:Name="txtCorreo" Placeholder="Correo Electrónico" Margin="0,2.5"></Entry>
+                    <Entry x:Name="txtContra" Placeholder="Contraseña" Margin="0,2.5" IsPassword="True"></Entry>
+                    <Entry x:Name="txtNombre" Placeholder="Nombre Completo" Margin="0,2.5"></Entry>
+                    <Picker x:Name="cboCB" Title="Club Biblico" Margin="0,2.5" />
+                    <Button Text="Registrarse" BackgroundColor="#3897F0" BorderRadius="20" Clicked="Registrarse"/>
+                    
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

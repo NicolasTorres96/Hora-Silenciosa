@@ -23,3 +23,5 @@ C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\ne
 C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\netstandard2.0\HSpdv.dll
 C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\netstandard2.0\HSpdv.pdb
 C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\netstandard2.0\ListaHS.xaml.g.cs
+C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\netstandard2.0\Registro.xaml.g.cs
+C:\Users\Administrador\Documents\GitHub\Hora-Silenciosa\HSpdv\HSpdv\obj\Debug\netstandard2.0\RecuperaPass.xaml.g.cs
