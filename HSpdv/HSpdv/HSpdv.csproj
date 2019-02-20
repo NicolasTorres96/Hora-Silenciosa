@@ -14,13 +14,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="ListaHS.xaml">
+    <EmbeddedResource Update="Vistas\DiaHsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RecuperaPass.xaml">
+    <EmbeddedResource Update="Vistas\ListaHS.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Registro.xaml">
+    <EmbeddedResource Update="Vistas\RecuperaPass.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Registro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

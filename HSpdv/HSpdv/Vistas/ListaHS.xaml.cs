@@ -37,7 +37,7 @@ namespace HSpdv
             if (e.Item == null)
                 return;
 
-            await DisplayAlert("sGFSDGS",e.Item.ToString(),"ok");//this.Navigation.PushModalAsync(new DiaHsView(e.Item.));
+            await this.Navigation.PushModalAsync(new DiaHsView(e.Item.ToString()));
         }
     }
 }
