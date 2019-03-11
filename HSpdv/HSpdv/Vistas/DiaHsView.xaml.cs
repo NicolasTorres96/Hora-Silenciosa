@@ -12,7 +12,7 @@ namespace HSpdv.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DiaHsView : ContentPage
 	{
-		public DiaHsView ()
+		public DiaHsView (string titulo)
 		{
 			InitializeComponent ();
 		}

@@ -13,7 +13,7 @@
 
     <ContentPage.Content>
         <Grid>            
-            <Image Source="logo.jpg" Aspect="AspectFill"></Image>
+            <Image Source="pdv Logo.png" Aspect="AspectFill"></Image>
             <BoxView Color="#70de8f" Opacity="0.8"/>        
         <Grid>
             <Grid.RowDefinitions>
