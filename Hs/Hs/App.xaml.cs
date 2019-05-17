@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hs.Vistas;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

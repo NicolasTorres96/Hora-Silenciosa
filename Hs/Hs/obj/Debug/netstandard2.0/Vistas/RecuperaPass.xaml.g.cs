@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hs.Vistas.RecuperaPass.xaml", "Vistas/RecuperaPass.xaml", typeof(global::HSpdv.RecuperaPass))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hs.Vistas.RecuperaPass.xaml", "Vistas/RecuperaPass.xaml", typeof(global::Hs.Vistas.RecuperaPass))]
 
-namespace HSpdv {
+namespace Hs.Vistas {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Vistas\\RecuperaPass.xaml")]

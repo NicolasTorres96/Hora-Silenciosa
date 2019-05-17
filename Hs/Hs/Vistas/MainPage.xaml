@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:HSpdv"
-             x:Class="HSpdv.MainPage">
+             xmlns:local="clr-namespace:Hs"
+             x:Class="Hs.Vistas.MainPage">
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments ="Thickness">
@@ -12,14 +12,14 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <Grid>            
-            <Image Source="pdv Logo.png" Aspect="AspectFill"></Image>
-            <BoxView Color="#70de8f" Opacity="0.8"/>        
         <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+            <Image Source="pdv Logo.png" Aspect="AspectFill"></Image>
+            <BoxView Color="#70de8f" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
                 <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
                 <StackLayout Grid.Row="1" Padding="30,20">
                     <Entry x:Name="txtCorreo" Placeholder="Correo Electrónico" Margin="0,40,0,0"></Entry>
@@ -28,7 +28,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Olvidaste tu Contraseña?" TextColor="Black" >
                             <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="RecuperarPass"></TapGestureRecognizer>
+                                <TapGestureRecognizer Tapped="RecuperarPass"></TapGestureRecognizer>
                             </Label.GestureRecognizers>
                         </Label>
                         <Label Text="Registrarse" TextColor="Black"  HorizontalOptions="EndAndExpand" FontAttributes="Bold">

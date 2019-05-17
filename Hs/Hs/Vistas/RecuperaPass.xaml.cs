@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace HSpdv
+namespace Hs.Vistas
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RecuperaPass : ContentPage
@@ -16,10 +16,9 @@ namespace HSpdv
 		{
 			InitializeComponent ();
 		}
-
-        private void Recuperar(object sender, EventArgs e)
-        {
-            DisplayAlert("Exito", "Clave Recuperada", "Aceptar");
-        }
-    }
+		private void Recuperar(object sender, EventArgs e)
+		{
+			DisplayAlert("Exito", "Clave Recuperada", "Aceptar");
+		}
+	}
 }

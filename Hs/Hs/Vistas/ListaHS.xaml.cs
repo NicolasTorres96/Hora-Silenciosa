@@ -1,4 +1,5 @@
-﻿using HSpdv.Vistas;
+﻿using Hs.Clases;
+using Hs.Vistas;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -8,37 +9,37 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace HSpdv
+namespace Hs.Vistas
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListaHS : ContentPage
-    {
-        public User _user { get; set; }
-        public ObservableCollection<string> Items { get; set; }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class ListaHS : ContentPage
+	{
+		public User _user { get; set; }
+		public ObservableCollection<string> Items { get; set; }
 
-        public ListaHS( User user)
-        {
-            InitializeComponent(); 
-            BindingContext = user;
+		public ListaHS(User user)
+		{
+			InitializeComponent();
+			BindingContext = user;
 
-            Items = new ObservableCollection<string>
-            {
-                "Dia 1",
-                "Dia 2",
-                "Dia 3",
-                "Dia 4",
-                "Dia 5"
-            };
-			
+			Items = new ObservableCollection<string>
+			{
+				"Dia 1",
+				"Dia 2",
+				"Dia 3",
+				"Dia 4",
+				"Dia 5"
+			};
+
 			MyListView.ItemsSource = Items;
-        }
+		}
 
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            if (e.Item == null)
-                return;
+		async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+		{
+			if (e.Item == null)
+				return;
 
-            await this.Navigation.PushModalAsync(new DiaHsView(e.Item.ToString()));
-        }
-    }
+			await this.Navigation.PushModalAsync(new DiaHsView(e.Item.ToString()));
+		}
+	}
 }

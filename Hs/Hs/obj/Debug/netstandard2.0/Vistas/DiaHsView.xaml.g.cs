@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hs.Vistas.DiaHsView.xaml", "Vistas/DiaHsView.xaml", typeof(global::HSpdv.Vistas.DiaHsView))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hs.Vistas.DiaHsView.xaml", "Vistas/DiaHsView.xaml", typeof(global::Hs.Vistas.DiaHsView))]
 
-namespace HSpdv.Vistas {
+namespace Hs.Vistas {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Vistas\\DiaHsView.xaml")]
