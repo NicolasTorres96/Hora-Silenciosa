@@ -23,6 +23,5 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\ne
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.deps.json
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.pdb
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.pdb

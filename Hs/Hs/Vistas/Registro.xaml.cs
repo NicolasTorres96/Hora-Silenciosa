@@ -1,4 +1,5 @@
 ﻿using Hs.Clases;
+using Hs.Data;
 using Hs.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Registro : ContentPage
 	{
+		RegistroUser registroUser = new RegistroUser();
 		public Registro()
 		{
 			InitializeComponent();
@@ -24,8 +26,9 @@ namespace Hs.Vistas
 			cboCB.ItemsSource = clubes;
 		}
 
-		public void Registrarse(object sender, EventArgs args)
+		public async void Registrarse(object sender, EventArgs args)
 		{
+			long resultado = 0;
 			try
 			{
 				if (ValidaCampos())
@@ -36,11 +39,22 @@ namespace Hs.Vistas
 					usuario.correo = txtCorreo.Text;
 					usuario.contraseña = txtContra.Text;
 					usuario.cb = cboCB.SelectedItem.ToString();
+
+					resultado = await registroUser.RegistroUsuario(usuario);
+					if (resultado == 1)
+					{
+						DependencyService.Get<Toast>().Show("Registro correcto");
+					}
+					else
+					{
+						DependencyService.Get<Toast>().Show("Error en el Registro");
+					}
+
 				}
 			}
 			catch (Exception ex)
 			{
-				throw ex;
+				DependencyService.Get<Toast>().Show("Error en el Registro");
 			}
 		}
 
