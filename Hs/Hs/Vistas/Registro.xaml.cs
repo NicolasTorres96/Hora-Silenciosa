@@ -16,14 +16,31 @@ namespace Hs.Vistas
 	public partial class Registro : ContentPage
 	{
 		RegistroUser registroUser = new RegistroUser();
+		ClubBiblico clubesRest = new ClubBiblico();
 		public Registro()
 		{
 			InitializeComponent();
-			List<String> clubes = new List<string>();
+			cargaCombo();
+			/*List<String> clubes = new List<string>();
 			clubes.Add("La Gracia");
 			clubes.Add("Cerrillos");
 			clubes.Add("4 Álamos");
-			cboCB.ItemsSource = clubes;
+			cboCB.ItemsSource = clubes;*/
+		}
+
+		private async void cargaCombo()
+		{
+			try
+			{
+				cboCB.ItemsSource = await clubesRest.ListarCB();
+				cboCB.ItemDisplayBinding = new Binding("Descripcion");
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+
+			 
 		}
 
 		public async void Registrarse(object sender, EventArgs args)
