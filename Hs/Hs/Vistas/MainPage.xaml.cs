@@ -12,7 +12,7 @@ namespace Hs.Vistas
 {
 	public partial class MainPage : ContentPage
 	{
-		LoginUser loginUser = new LoginUser();
+		Usuario loginUser = new Usuario();
 		public MainPage()
 		{
 			InitializeComponent();

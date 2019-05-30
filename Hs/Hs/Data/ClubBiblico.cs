@@ -16,26 +16,24 @@ namespace Hs.Data
 		{
 			try
 			{
-				string url_servicio = uri_servidor + "api/clubes";
+				string url_servicio = uri_servidor + "/api/club";
 				List<ClubBiblicoClass> ls = new List<ClubBiblicoClass>();
 
 				//Envio solicitud
-				var response2 = await cliente.GetAsync(url_servicio).ConfigureAwait(false);
+				var response2 = await cliente.GetAsync(url_servicio);
 
 				//verifico respuesta
 				if (response2.IsSuccessStatusCode)
 				{
-					string contenido2 = await response2.Content.ReadAsStringAsync();
-					XElement xml2 = XElement.Parse(contenido2);
-					string json2 = xml2.FirstNode.ToString();
-					ls = JsonConvert.DeserializeObject<List<ClubBiblicoClass>>(json2);
+					string contenido2 = await response2.Content.ReadAsStringAsync();					
+					ls = JsonConvert.DeserializeObject<List<ClubBiblicoClass>>(contenido2);
 				}
 				return ls;
 			}
 			catch (Exception ex)
 			{
 				DependencyService.Get<Toast>().Show(ex.ToString());
-				throw;
+				return null;
 			}
 		}
 

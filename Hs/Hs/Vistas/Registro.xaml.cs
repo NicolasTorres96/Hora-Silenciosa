@@ -15,32 +15,23 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Registro : ContentPage
 	{
-		RegistroUser registroUser = new RegistroUser();
+		Usuario registroUser = new Usuario();
 		ClubBiblico clubesRest = new ClubBiblico();
 		public Registro()
 		{
 			InitializeComponent();
-			cargaCombo();
-			/*List<String> clubes = new List<string>();
-			clubes.Add("La Gracia");
-			clubes.Add("Cerrillos");
-			clubes.Add("4 Álamos");
-			cboCB.ItemsSource = clubes;*/
+			PreparaPantalla();
 		}
 
-		private async void cargaCombo()
+		private async void PreparaPantalla()
 		{
-			try
-			{
-				cboCB.ItemsSource = await clubesRest.ListarCB();
-				cboCB.ItemDisplayBinding = new Binding("Descripcion");
-			}
-			catch (Exception)
-			{
-				throw;
-			}
+			await cargaCombo();
+		}
 
-			 
+		private async Task cargaCombo()
+		{
+			cboCB.ItemsSource = await clubesRest.ListarCB();
+			cboCB.ItemDisplayBinding = new Binding("Descripcion");
 		}
 
 		public async void Registrarse(object sender, EventArgs args)
@@ -77,7 +68,7 @@ namespace Hs.Vistas
 
 		private bool ValidaCampos()
 		{
-			if ((txtCorreo.Text == null)|| (!txtCorreo.Text.Contains("@") && txtCorreo.Text != null))
+			if ((txtCorreo.Text == null) || (!txtCorreo.Text.Contains("@") && txtCorreo.Text != null))
 			{
 				DependencyService.Get<Toast>().Show("Ingrese un correo valido");
 				return false;
@@ -102,16 +93,16 @@ namespace Hs.Vistas
 				DependencyService.Get<Toast>().Show("Ingresa tu rut sin puntos ni guion");
 				return false;
 			}
-			if (cboCB.SelectedIndex<0)
+			if (cboCB.SelectedIndex < 0)
 			{
 				DependencyService.Get<Toast>().Show("Selecciona tu Club Biblico");
 				return false;
 			}
 			return true;
 		}
-		
+
 		private string DevuelveDigitoVerificador(int rut)
-		{			
+		{
 			int suma = 0;
 			int multiplicador = 1;
 			while (rut != 0)
@@ -156,7 +147,7 @@ namespace Hs.Vistas
 			{
 				DependencyService.Get<Toast>().Show(ex.GetType().ToString());
 			}
-			
+
 		}
 
 		private void TxtRut_Focused(object sender, FocusEventArgs e)

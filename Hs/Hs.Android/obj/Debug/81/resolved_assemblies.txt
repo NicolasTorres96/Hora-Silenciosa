@@ -4,6 +4,7 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Java.Interop.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Mono.Android.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\mscorlib.dll
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Newtonsoft.Json.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Core.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Xml.dll

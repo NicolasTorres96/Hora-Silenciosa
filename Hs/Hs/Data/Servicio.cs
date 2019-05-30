@@ -13,7 +13,7 @@ namespace Hs.Data
 		public Servicio()
 		{
 			cliente = new HttpClient();
-			this.uri_servidor = string.Format("192.168.50.66");
+			this.uri_servidor = string.Format("https://ppto-sanantonio.caschile.cl/Servicios-Xamarin");
 		}
 	}
 }

@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Hs.Clases;
+using Hs.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,13 +16,40 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RecuperaPass : ContentPage
 	{
+		Usuario usuarioRest = new Usuario();
 		public RecuperaPass ()
 		{
 			InitializeComponent ();
 		}
-		private void Recuperar(object sender, EventArgs e)
+		private async void Recuperar(object sender, EventArgs e)
 		{
-			DisplayAlert("Exito", "Clave Recuperada", "Aceptar");
+			User user = await usuarioRest.TraePass(txtRut.Text);
+			user.nombreCompleto = "nombre prueba";
+			user.contraseña = "xxxx";
+			SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+			MailMessage message = new MailMessage();
+			message.From = new MailAddress("nicolas.tvasquez@gmail.com", "Nicolas");
+			message.To.Add(txtRut.Text);
+			message.Subject = "Test Correo";
+			message.Body = BodyMensaje(user);
+			message.IsBodyHtml = true;
+			client.EnableSsl = true;
+			client.DeliveryMethod = SmtpDeliveryMethod.Network;
+            client.UseDefaultCredentials = false;
+			client.Credentials = new NetworkCredential("nicolas.tvasquez@gmail.com", "nikogb96");
+			client.Send(message);
+		}
+
+		private string BodyMensaje(User user)
+		{
+			return string.Format("<table style=\"max-width: 600px; padding: 10px; margin:0 auto; border-collapse: collapse;\"><tr>"+
+				"<td style=\"padding: 0\"><img style=\"padding: 0; display: block\" src=\"https://i.postimg.cc/Ss3CnPkb/banner-head-correo.png\""+
+				" width=\"100%\"></td></tr>	<tr><td style=\"background-color: #ecf0f1\"><div style=\"color: #34495e; margin: 4% 10% 2%; text-align:"+
+				" justify;font-family: sans-serif\"><h2 style=\"color: #e67e22; margin: 0 0 7px\">Hola {0}!</h2><p style=\"margin: 2px; font-size: 15px\">"+
+				"Según lo solicitado te enviamos tu contreseña: {1} <br>Recuerda que esta contraseña es personal y Disfruta de tu Hora Silenciosa. </p>"+
+				"<div style=\"width: 100%;margin:20px 0; display: inline-block;text-align: center\"><img style=\"padding: 0; width: 95%; margin: 5px\""+
+				" src=\"https://i.postimg.cc/fWFkhXTp/banner-correo.png\"></div><p style=\"color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0\">" +
+				"Hora Silenciosa by Nicolás Torres</p></div></td></tr></table>",user.nombreCompleto,user.contraseña);
 		}
 	}
 }

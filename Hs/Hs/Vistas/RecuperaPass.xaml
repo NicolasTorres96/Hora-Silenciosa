@@ -21,9 +21,9 @@
                 <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
                 <StackLayout Grid.Row="1" Padding="30,20"  Margin="0,80">
                     <Label FontAttributes="Bold"
-                           Text="Ingrese Correo asociado a su cuenta para que le enviemos su contraseña, Gracias."
+                           Text="Ingrese Rut asociado a su cuenta para que le enviemos su contraseña, Gracias."
                            Opacity="0.9"></Label>
-                    <Entry x:Name="txtCorreo" Placeholder="Correo Electrónico" Margin="0,2.5"></Entry>
+                    <Entry x:Name="txtRut" Placeholder="Rut" Margin="0,2.5"></Entry>
                     <Button Text="Recuperar" BackgroundColor="#3897F0" BorderRadius="20" Clicked="Recuperar"/>
 
                 </StackLayout>
