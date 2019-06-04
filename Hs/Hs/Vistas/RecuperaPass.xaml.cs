@@ -1,5 +1,6 @@
 ﻿using Hs.Clases;
 using Hs.Data;
+using Hs.Utilidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,21 +24,42 @@ namespace Hs.Vistas
 		}
 		private async void Recuperar(object sender, EventArgs e)
 		{
-			User user = await usuarioRest.TraePass(txtRut.Text);
-			user.nombreCompleto = "nombre prueba";
-			user.contraseña = "xxxx";
-			SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-			MailMessage message = new MailMessage();
-			message.From = new MailAddress("nicolas.tvasquez@gmail.com", "Nicolas");
-			message.To.Add(txtRut.Text);
-			message.Subject = "Test Correo";
-			message.Body = BodyMensaje(user);
-			message.IsBodyHtml = true;
-			client.EnableSsl = true;
-			client.DeliveryMethod = SmtpDeliveryMethod.Network;
-            client.UseDefaultCredentials = false;
-			client.Credentials = new NetworkCredential("nicolas.tvasquez@gmail.com", "nikogb96");
-			client.Send(message);
+			User user = await traerUsuario();
+			
+			if (user!= null)
+			{
+				SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+				MailMessage message = new MailMessage();
+				message.From = new MailAddress("contacto.horasilenciosa@gmail.com", "Contacto");
+				message.To.Add(user.correo);
+				message.Subject = "Recuperación de Contraseña";
+				message.Body = BodyMensaje(user);
+				message.IsBodyHtml = true;
+				client.EnableSsl = true;
+				client.DeliveryMethod = SmtpDeliveryMethod.Network;
+				client.UseDefaultCredentials = false;
+				client.Credentials = new NetworkCredential("contacto.horasilenciosa@gmail.com", "administradorhs");
+				client.Send(message);
+				DependencyService.Get<Toast>().Show("Correo Enviado");
+			}
+			else
+			{
+				DependencyService.Get<Toast>().Show("Usuario no existe");
+			}
+			
+		}
+
+		private async Task<User> traerUsuario()
+		{
+			if (string.IsNullOrWhiteSpace(txtRut.Text))
+			{
+				User user = new User();
+				return user;
+			}
+			else
+			{				
+				return await usuarioRest.TraeUsuario(txtRut.Text);
+			}
 		}
 
 		private string BodyMensaje(User user)
@@ -49,7 +71,7 @@ namespace Hs.Vistas
 				"Según lo solicitado te enviamos tu contreseña: {1} <br>Recuerda que esta contraseña es personal y Disfruta de tu Hora Silenciosa. </p>"+
 				"<div style=\"width: 100%;margin:20px 0; display: inline-block;text-align: center\"><img style=\"padding: 0; width: 95%; margin: 5px\""+
 				" src=\"https://i.postimg.cc/fWFkhXTp/banner-correo.png\"></div><p style=\"color: #b3b3b3; font-size: 12px; text-align: center;margin: 30px 0 0\">" +
-				"Hora Silenciosa by Nicolás Torres</p></div></td></tr></table>",user.nombreCompleto,user.contraseña);
+				"Hora Silenciosa by Nicolás Torres</p></div></td></tr></table>",user.nombreCompleto,user.contrasena);
 		}
 	}
 }

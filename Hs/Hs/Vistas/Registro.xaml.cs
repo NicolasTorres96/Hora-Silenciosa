@@ -45,8 +45,8 @@ namespace Hs.Vistas
 					usuario.rut = txtRut.Text;
 					usuario.nombreCompleto = txtNombre.Text;
 					usuario.correo = txtCorreo.Text;
-					usuario.contraseña = txtContra.Text;
-					usuario.cb = cboCB.SelectedItem.ToString();
+					usuario.contrasena = txtContra.Text;
+					usuario.cb = (cboCB.SelectedItem as ClubBiblicoClass).Descripcion;
 
 					resultado = await registroUser.RegistroUsuario(usuario);
 					if (resultado == 1)
@@ -133,7 +133,7 @@ namespace Hs.Vistas
 			try
 			{
 				txtRut.MaxLength = 12;
-				txtRut.Text = txtRut.Text + " - " + DevuelveDigitoVerificador(int.Parse(txtRut.Text));
+				txtRut.Text = txtRut.Text + "-" + DevuelveDigitoVerificador(int.Parse(txtRut.Text));
 			}
 			catch (FormatException ex)
 			{

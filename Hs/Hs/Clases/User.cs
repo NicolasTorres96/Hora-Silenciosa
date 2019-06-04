@@ -8,7 +8,7 @@ namespace Hs.Clases
 	{
 		public string nombreCompleto { get; set; }
 		public string correo { get; set; }
-		public string contraseña { get; set; }
+		public string contrasena { get; set; }
 		public string rut { get; set; }
 		public string cb { get; set; }
 	}

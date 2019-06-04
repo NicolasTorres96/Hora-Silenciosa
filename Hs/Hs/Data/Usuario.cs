@@ -14,9 +14,9 @@ namespace Hs.Data
 		public async Task<User> LoginUsuario(User user)
 		{
 			User usuario = new User();
-			string url_servicio = uri_servidor + "/api/usuarios/" + user.rut+"/"+user.contraseña;
+			string url_servicio = uri_servidor + "/api/usuarios/" + user.rut+"/"+user.contrasena;
 						
-			var response = await cliente.GetAsync(uri_servidor).ConfigureAwait(false);
+			var response = await cliente.GetAsync(url_servicio);
 
 			if (response.IsSuccessStatusCode)
 			{
@@ -27,13 +27,13 @@ namespace Hs.Data
 			return usuario;
 		}
 
-		public async Task<User> TraePass(string rut)
+		public async Task<User> TraeUsuario(string rut)
 		{
 			
 			string url_servicio = uri_servidor + "/api/usuarios/"+rut;
 			User usuario = new User();
 			
-			var response = await cliente.GetAsync(uri_servidor).ConfigureAwait(false);
+			var response = await cliente.GetAsync(url_servicio);
 
 			if (response.IsSuccessStatusCode)
 			{
@@ -46,20 +46,16 @@ namespace Hs.Data
 		public async Task<Int64> RegistroUsuario(User user)
 		{
 			Int64 retorno = 0;
-			Dictionary<string, object> parametros = new Dictionary<string, object>();
-			parametros.Add("User", user);
 
-			StringContent contenido = new StringContent(JsonConvert.SerializeObject(parametros), Encoding.UTF8, "application/json");
-			var p = JsonConvert.SerializeObject(parametros);
-			var response = await cliente.PostAsync(uri_servidor, contenido).ConfigureAwait(false);
+			string url_servicio = uri_servidor + "/api/usuarios";
+
+			StringContent contenido = new StringContent(JsonConvert.SerializeObject(user), Encoding.UTF8, "application/json");
+
+			var response = await cliente.PostAsync(url_servicio, contenido).ConfigureAwait(false);
 
 			if (response.IsSuccessStatusCode)
 			{
-				string resultado = await response.Content.ReadAsStringAsync();
-
-				JObject json_obj = JsonConvert.DeserializeObject<JObject>(resultado);
-				String x = json_obj.Value<String>("d");
-				retorno = Convert.ToInt64(x);
+				retorno = 1;
 			}
 
 			return retorno;
