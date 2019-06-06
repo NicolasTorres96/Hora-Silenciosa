@@ -2,32 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hs.Vistas.ListaHS">
-  <ListView x:Name="MyListView"
-            ItemsSource="{Binding Items}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
-            
-    <!--Built in Cells-->
-    <ListView.ItemTemplate>
-        <DataTemplate>
-            <TextCell Text="{Binding .}" />
-        </DataTemplate>
-    </ListView.ItemTemplate>
-    
-    <!--Custom View Cells-->
-    <!--
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <StackLayout>
-            <Label Text="{Binding Text}" 
-                   Style="{DynamicResource ListItemTextStyle}" />
-            <Label Text="{Binding Detail}" 
-                   Style="{DynamicResource ListItemDetailTextStyle}"/>
-          </StackLayout>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-    -->
-  </ListView>
+    <StackLayout>        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lblSaludo" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" Margin="10" FontSize="Medium"></Label>
+            <SearchBar x:Name="sbBuscadorDia" Grid.Column="0" Grid.Row="1" Placeholder="Dia" TextChanged="SbBuscadorDia_TextChanged"/>
+        </Grid>
+        <ListView x:Name="MyListView" ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="60" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label x:Name="lblDia" Grid.Column="0" HorizontalOptions="Start" Text="{Binding dia}" Margin="5"></Label>
+                            <Label x:Name="lblCita" Grid.Column="1" Text="{Binding cita}" VerticalTextAlignment="Center" Margin="5"/>
+                            <Image x:Name="imgListo" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Source="{Binding realizada}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
 </ContentPage>

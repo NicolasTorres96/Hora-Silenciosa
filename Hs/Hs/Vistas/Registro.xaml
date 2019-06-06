@@ -21,7 +21,7 @@
                 <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
                 <StackLayout Grid.Row="1" Padding="30,20">
                     <Entry x:Name="txtNombre" Placeholder="Nombre Completo" Margin="0,2.5"></Entry>
-                    <Entry x:Name="txtRut" Placeholder="Rut" Margin="0,2.5" MaxLength="8" Keyboard="Numeric" Unfocused="TxtRut_Unfocused" Focused="TxtRut_Focused"></Entry>
+                    <Entry x:Name="txtRut" Placeholder="Rut (12345678)" Margin="0,2.5" MaxLength="8" Keyboard="Numeric" Unfocused="TxtRut_Unfocused" Focused="TxtRut_Focused"></Entry>
                     <Entry x:Name="txtCorreo" Placeholder="Correo Electrónico" Margin="0,2.5"></Entry>
                     <Entry x:Name="txtContra" Placeholder="Contraseña" Margin="0,2.5" IsPassword="True"></Entry>                    
                     <Picker x:Name="cboCB" Title="Club Biblico" Margin="0,2.5" />                    

@@ -15,8 +15,8 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Registro : ContentPage
 	{
-		Usuario registroUser = new Usuario();
-		ClubBiblico clubesRest = new ClubBiblico();
+		UsuarioData registroUser = new UsuarioData();
+		ClubBiblicoData clubesRest = new ClubBiblicoData();
 		public Registro()
 		{
 			InitializeComponent();
@@ -41,7 +41,7 @@ namespace Hs.Vistas
 			{
 				if (ValidaCampos())
 				{
-					User usuario = new User();
+					UsuarioClass usuario = new UsuarioClass();
 					usuario.rut = txtRut.Text;
 					usuario.nombreCompleto = txtNombre.Text;
 					usuario.correo = txtCorreo.Text;
@@ -132,7 +132,7 @@ namespace Hs.Vistas
 		{
 			try
 			{
-				txtRut.MaxLength = 12;
+				txtRut.MaxLength = 10;
 				txtRut.Text = txtRut.Text + "-" + DevuelveDigitoVerificador(int.Parse(txtRut.Text));
 			}
 			catch (FormatException ex)

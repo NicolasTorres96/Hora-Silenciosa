@@ -100,7 +100,6 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPho
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\zh-Hant\Xamarin.Forms.Platform.iOS.resources.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.pdb
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.dll.mdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
@@ -113,3 +112,4 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPho
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.csproj.CopyComplete
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.exe
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.pdb
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll

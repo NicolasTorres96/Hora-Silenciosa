@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hs.Clases;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DiaHsView : ContentPage
 	{
-		public DiaHsView (string titulo)
+		public DiaHsView (EncabezadoDiaHsClass encabezado)
 		{
 			InitializeComponent ();
 		}

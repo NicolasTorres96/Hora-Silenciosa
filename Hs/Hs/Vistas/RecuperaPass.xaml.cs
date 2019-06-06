@@ -17,14 +17,14 @@ namespace Hs.Vistas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RecuperaPass : ContentPage
 	{
-		Usuario usuarioRest = new Usuario();
+		UsuarioData usuarioRest = new UsuarioData();
 		public RecuperaPass ()
 		{
 			InitializeComponent ();
 		}
 		private async void Recuperar(object sender, EventArgs e)
 		{
-			User user = await traerUsuario();
+			UsuarioClass user = await traerUsuario();
 			
 			if (user!= null)
 			{
@@ -49,11 +49,11 @@ namespace Hs.Vistas
 			
 		}
 
-		private async Task<User> traerUsuario()
+		private async Task<UsuarioClass> traerUsuario()
 		{
 			if (string.IsNullOrWhiteSpace(txtRut.Text))
 			{
-				User user = new User();
+				UsuarioClass user = new UsuarioClass();
 				return user;
 			}
 			else
@@ -62,7 +62,7 @@ namespace Hs.Vistas
 			}
 		}
 
-		private string BodyMensaje(User user)
+		private string BodyMensaje(UsuarioClass user)
 		{
 			return string.Format("<table style=\"max-width: 600px; padding: 10px; margin:0 auto; border-collapse: collapse;\"><tr>"+
 				"<td style=\"padding: 0\"><img style=\"padding: 0; display: block\" src=\"https://i.postimg.cc/Ss3CnPkb/banner-head-correo.png\""+

@@ -13,42 +13,34 @@ namespace Hs.Vistas
 {
 	public partial class MainPage : ContentPage
 	{
-		Usuario loginUser = new Usuario();
+		UsuarioData loginUser = new UsuarioData();
 		public MainPage()
 		{
 			InitializeComponent();
 		}
 		public async void IniciarSesion(object sender, EventArgs args)
-		{			
-			User usuario = new User();
-			usuario.rut = txtRut.Text;
-			usuario.contrasena = txtContra.Text;
-
-			usuario = await loginUser.LoginUsuario(usuario);
-			if (usuario!= null)
+		{
+			UsuarioClass usuario = new UsuarioClass();
+			if (/*txtContra.Text != null*/true)
 			{
-				await this.Navigation.PushModalAsync(new ListaHS(usuario));
+				usuario.rut = txtRut.Text;
+				usuario.contrasena = txtContra.Text;
+				usuario = await loginUser.LoginUsuario(usuario);
+			}
+			else
+			{
+				DependencyService.Get<Toast>().Show("Ingrese Contraseña");
+			}
+
+			if (usuario != null)
+			{
+				var lista = new ListaHS(usuario);
+				await this.Navigation.PushModalAsync(lista);
 			}
 			else
 			{
 				DependencyService.Get<Toast>().Show("Usuario y/o Contraseña Incorrectos");
 			}
-			
-			//if (txtCorreo.Text == "Correo@correo.cl" && txtContra.Text == "1234")
-			//{
-			//	DisplayAlert("Mensaje", "Sesion Iniciada", "OK");
-			//	var nombre = txtCorreo.Text;
-			//	var user = new User
-			//	{
-			//		nombreCompleto = nombre//, por si agrego algo mas
-			//	};
-			//	this.Navigation.PushModalAsync(new ListaHS(user));
-			//}
-			//else
-			//{
-			//	DisplayAlert("Mensaje", "Usuario y/o Contraseña Incorrectos", "OK");
-			//}
-
 		}
 		private void Registrarse(object sender, EventArgs e)
 		{

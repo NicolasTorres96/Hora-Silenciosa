@@ -2895,7 +2895,10 @@ namespace Hs.Droid
 			public const int ic_vol_type_tv_light = 2131296516;
 			
 			// aapt resource value: 0x7F010002
-			public const int logo = 2130771970;
+			public const int lista = 2130771970;
+			
+			// aapt resource value: 0x7F010003
+			public const int logo = 2130771971;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -2996,8 +2999,11 @@ namespace Hs.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010003
-			public const int pdvLogo = 2130771971;
+			// aapt resource value: 0x7F010004
+			public const int pdvLogo = 2130771972;
+			
+			// aapt resource value: 0x7F010005
+			public const int sin_hacer = 2130771973;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3842,7 +3848,16 @@ namespace Hs.Droid
 			public const int icon_round = 2130968579;
 			
 			// aapt resource value: 0x7F040004
-			public const int launcher_foreground = 2130968580;
+			public const int ic_launcher = 2130968580;
+			
+			// aapt resource value: 0x7F040005
+			public const int launcher_foreground = 2130968581;
+			
+			// aapt resource value: 0x7F040006
+			public const int lista = 2130968582;
+			
+			// aapt resource value: 0x7F040007
+			public const int sin_hacer = 2130968583;
 			
 			static Mipmap()
 			{
