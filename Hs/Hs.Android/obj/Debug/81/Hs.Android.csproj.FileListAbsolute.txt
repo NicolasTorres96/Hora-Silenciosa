@@ -225,6 +225,4 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\res\mipmap-xxxhdpi\lista.png
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\res\drawable\sin_hacer.png
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\res\drawable\lista.png
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.dll
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\bin\Debug\Hs.dll.mdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\linksrc\Hs.dll.mdb

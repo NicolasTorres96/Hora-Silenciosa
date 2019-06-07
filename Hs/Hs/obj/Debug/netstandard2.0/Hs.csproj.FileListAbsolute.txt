@@ -26,3 +26,4 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\ne
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.pdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.csprojAssemblyReference.cache
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\ViewPruebas.xaml.g.cs
