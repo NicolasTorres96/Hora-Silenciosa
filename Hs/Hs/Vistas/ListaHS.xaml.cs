@@ -1,5 +1,6 @@
 ﻿using Hs.Clases;
 using Hs.Data;
+using Hs.Utilidades;
 using Hs.Vistas;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,12 @@ namespace Hs.Vistas
 		public ListaHS(UsuarioClass user)
 		{
 			InitializeComponent();
-			PreparaPantalla(user);			
+			PreparaPantalla(user);
+		}
+		protected async override void OnAppearing()
+		{
+			base.OnAppearing();
+			await cargaLista();
 		}
 
 		private async void PreparaPantalla(UsuarioClass user)

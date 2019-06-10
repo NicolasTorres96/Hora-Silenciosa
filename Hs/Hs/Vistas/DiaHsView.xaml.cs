@@ -31,13 +31,13 @@ namespace Hs.Vistas
 			lblCita.Text = encabezadoGlobal.cita;
 			lblDia.Text = encabezadoGlobal.dia;
 			await cargaComentario();
-			//cargaReflexion();
+			await cargaReflexion();
 		}
 
-		/*private void cargaReflexion()
+		private async Task cargaReflexion()
 		{
-			throw new NotImplementedException();
-		}*/
+			txtReflexion.Text = await diaHsRest.TraerReflexion(encabezadoGlobal.dia+encabezadoGlobal.rut);
+		}
 
 		private async Task cargaComentario()
 		{
@@ -56,6 +56,7 @@ namespace Hs.Vistas
 			int resultado = 0;
 			DiaHsUserClass diaReflexion = new DiaHsUserClass();
 			diaReflexion.reflexion = txtReflexion.Text;
+			diaReflexion.diarut = encabezadoGlobal.dia + encabezadoGlobal.rut;
 			diaReflexion.dia = encabezadoGlobal.dia;
 			diaReflexion.rut = encabezadoGlobal.rut;
 			UsuarioClass user = new UsuarioClass();
@@ -71,5 +72,7 @@ namespace Hs.Vistas
 				DependencyService.Get<Toast>().Show("Error en el Registro");
 			}
 		}
+
+		
 	}
 }

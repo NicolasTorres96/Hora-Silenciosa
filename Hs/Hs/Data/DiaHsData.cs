@@ -69,6 +69,31 @@ namespace Hs.Data
 			}
 		}
 
+		public async Task<string> TraerReflexion(string diarut)
+		{
+			try
+			{
+				string url_servicio = uri_servidor + "/DiaHs/TraerReflexion/"+ diarut;
+				DiaHsUserClass ls = new DiaHsUserClass();
+
+				//Envio solicitud
+				var response2 = await cliente.GetAsync(url_servicio);
+
+				//verifico respuesta
+				if (response2.IsSuccessStatusCode)
+				{
+					string contenido2 = await response2.Content.ReadAsStringAsync();
+					ls = JsonConvert.DeserializeObject<DiaHsUserClass>(contenido2);					
+				}
+				return ls.reflexion;
+			}
+			catch (Exception ex)
+			{
+				DependencyService.Get<Toast>().Show(ex.ToString());
+				return null;
+			}
+		}
+
 		public async Task<List<EncabezadoDiaHsClass>> TraerEncabezado(string rut)
 		{
 			try

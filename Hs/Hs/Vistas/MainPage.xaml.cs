@@ -21,7 +21,7 @@ namespace Hs.Vistas
 		public async void IniciarSesion(object sender, EventArgs args)
 		{
 			UsuarioClass usuario = new UsuarioClass();
-			if (/*txtContra.Text != null*/true)
+			if (txtContra.Text != null)
 			{
 				usuario.rut = txtRut.Text;
 				usuario.contrasena = txtContra.Text;
