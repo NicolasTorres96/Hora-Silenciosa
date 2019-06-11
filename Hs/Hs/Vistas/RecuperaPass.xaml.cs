@@ -41,10 +41,12 @@ namespace Hs.Vistas
 				client.Credentials = new NetworkCredential("contacto.horasilenciosa@gmail.com", "administradorhs");
 				client.Send(message);
 				DependencyService.Get<Toast>().Show("Correo Enviado");
+				return;
 			}
 			else
 			{
 				DependencyService.Get<Toast>().Show("Usuario no existe");
+				return;
 			}
 			
 		}

@@ -18,7 +18,18 @@ namespace Hs.Vistas
 		{
 			InitializeComponent();
 		}
-		public async void IniciarSesion(object sender, EventArgs args)
+		
+		private void Registrarse(object sender, EventArgs e)
+		{
+			this.Navigation.PushModalAsync(new Registro());
+		}
+
+		private void RecuperarPass(object sender, EventArgs e)
+		{
+			this.Navigation.PushModalAsync(new RecuperaPass());
+		}
+		
+		private async void BtnIniciarSesion_Clicked(object sender, EventArgs e)
 		{
 			UsuarioClass usuario = new UsuarioClass();
 			if (txtContra.Text != null)
@@ -30,26 +41,18 @@ namespace Hs.Vistas
 			else
 			{
 				DependencyService.Get<Toast>().Show("Ingrese Contraseña");
+				return;
 			}
 
-			if (usuario != null)
+			if (usuario.nombreCompleto == "no se encontró el usuario")
 			{
-				var lista = new ListaHS(usuario);
-				await this.Navigation.PushModalAsync(lista);
+				DependencyService.Get<Toast>().Show("Usuario y/o Contraseña Incorrectos");
+				return;
 			}
 			else
 			{
-				DependencyService.Get<Toast>().Show("Usuario y/o Contraseña Incorrectos");
+				await this.Navigation.PushModalAsync(new ListaHS(usuario));
 			}
-		}
-		private void Registrarse(object sender, EventArgs e)
-		{
-			this.Navigation.PushModalAsync(new Registro());
-		}
-
-		private void RecuperarPass(object sender, EventArgs e)
-		{
-			this.Navigation.PushModalAsync(new RecuperaPass());
 		}
 	}
 }

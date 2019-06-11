@@ -52,10 +52,12 @@ namespace Hs.Vistas
 					if (resultado == 1)
 					{
 						DependencyService.Get<Toast>().Show("Registro correcto");
+						return;
 					}
 					else
 					{
 						DependencyService.Get<Toast>().Show("Error en el Registro");
+						return;
 					}
 
 				}
@@ -63,6 +65,7 @@ namespace Hs.Vistas
 			catch (Exception ex)
 			{
 				DependencyService.Get<Toast>().Show("Error en el Registro");
+				return;
 			}
 		}
 
@@ -96,6 +99,11 @@ namespace Hs.Vistas
 			if (cboCB.SelectedIndex < 0)
 			{
 				DependencyService.Get<Toast>().Show("Selecciona tu Club Biblico");
+				return false;
+			}
+			if (txtRut.Text.Length < 9)
+			{
+				DependencyService.Get<Toast>().Show("Rut Invalido");
 				return false;
 			}
 			return true;
@@ -138,14 +146,17 @@ namespace Hs.Vistas
 			catch (FormatException ex)
 			{
 				DependencyService.Get<Toast>().Show("Ingresa tu rut sin puntos ni guion");
+				return;
 			}
 			catch (NullReferenceException ex)
 			{
 				DependencyService.Get<Toast>().Show("Ingresa tu rut sin puntos ni guion");
+				return;
 			}
 			catch (Exception ex)
 			{
 				DependencyService.Get<Toast>().Show(ex.GetType().ToString());
+				return;
 			}
 
 		}

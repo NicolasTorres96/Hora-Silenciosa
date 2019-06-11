@@ -13,18 +13,34 @@ namespace Hs.Data
 	{
 		public async Task<UsuarioClass> LoginUsuario(UsuarioClass user)
 		{
-			UsuarioClass usuario = new UsuarioClass();
-			string url_servicio = uri_servidor + "/api/usuarios/" + user.rut+"/"+user.contrasena;
-						
-			var response = await cliente.GetAsync(url_servicio);
-
-			if (response.IsSuccessStatusCode)
+			try
 			{
-				string usuarioJSON = await response.Content.ReadAsStringAsync();
-				usuario = JsonConvert.DeserializeObject<UsuarioClass>(usuarioJSON);
-			}
+				UsuarioClass usuario = new UsuarioClass();
+				string url_servicio = uri_servidor + "/api/usuarios/" + user.rut + "/" + user.contrasena;
 
-			return usuario;
+				var response = await cliente.GetAsync(url_servicio);
+
+				if (response.IsSuccessStatusCode)
+				{
+					string usuarioJSON = await response.Content.ReadAsStringAsync();
+					if (usuarioJSON != "")
+					{
+						usuario = JsonConvert.DeserializeObject<UsuarioClass>(usuarioJSON);
+					}
+					else
+					{
+						usuario.nombreCompleto = "no se encontró el usuario";
+					}
+						
+				}
+				return usuario;
+			}
+			catch (Exception ex)
+			{
+				UsuarioClass usuario = new UsuarioClass();
+				usuario.nombreCompleto = "no se encontró el usuario";
+				return usuario;
+			}
 		}
 
 		public async Task<UsuarioClass> TraeUsuario(string rut)

@@ -66,10 +66,12 @@ namespace Hs.Vistas
 			{				
 				await Navigation.PopModalAsync();
 				DependencyService.Get<Toast>().Show("Registro correcto");
+				return;
 			}
 			else
 			{
 				DependencyService.Get<Toast>().Show("Error en el Registro");
+				return;
 			}
 		}
 

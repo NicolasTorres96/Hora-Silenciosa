@@ -26,7 +26,10 @@ namespace Hs.Data
 				if (response2.IsSuccessStatusCode)
 				{
 					string contenido2 = await response2.Content.ReadAsStringAsync();
-					ls = JsonConvert.DeserializeObject<List<DiaHSClass>>(contenido2);
+					if (contenido2 != null)
+					{
+						ls = JsonConvert.DeserializeObject<List<DiaHSClass>>(contenido2);
+					}
 				}
 				return ls;
 			}
@@ -89,18 +92,18 @@ namespace Hs.Data
 			}
 			catch (Exception ex)
 			{
-				DependencyService.Get<Toast>().Show(ex.ToString());
-				return null;
+				//DependencyService.Get<Toast>().Show(ex.ToString());
+				return "";
 			}
 		}
 
 		public async Task<List<EncabezadoDiaHsClass>> TraerEncabezado(string rut)
 		{
+			EncabezadoDiaHsClass enca = new EncabezadoDiaHsClass();
 			try
 			{
 				string url_servicio = uri_servidor + "/EncabezadoDia/GrabaRelaciones/" + rut;
-				List < EncabezadoDiaHsClass> ls = new List<EncabezadoDiaHsClass>();
-
+				List <EncabezadoDiaHsClass> ls = new List<EncabezadoDiaHsClass>();				
 				//Envio solicitud
 				var response2 = await cliente.GetAsync(url_servicio);
 
@@ -108,14 +111,14 @@ namespace Hs.Data
 				if (response2.IsSuccessStatusCode)
 				{
 					string contenido2 = await response2.Content.ReadAsStringAsync();
-					ls = JsonConvert.DeserializeObject< List<EncabezadoDiaHsClass>>(contenido2);
+					ls = JsonConvert.DeserializeObject<List<EncabezadoDiaHsClass>>(contenido2);
 				}
 				return ls;
 			}
 			catch (Exception ex)
 			{
-				DependencyService.Get<Toast>().Show(ex.ToString());
-				return null;
+				List<EncabezadoDiaHsClass> lsex = new List<EncabezadoDiaHsClass>();
+				return lsex;
 			}
 		}
 	}

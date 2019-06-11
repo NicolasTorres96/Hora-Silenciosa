@@ -10,20 +10,19 @@ C:\Users\Administrador\source\repos\Hs\Hs\Hs\obj\Debug\netstandard2.0\Hs.Assembl
 C:\Users\Administrador\source\repos\Hs\Hs\Hs\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Administrador\source\repos\Hs\Hs\Hs\obj\Debug\netstandard2.0\Hs.dll
 C:\Users\Administrador\source\repos\Hs\Hs\Hs\obj\Debug\netstandard2.0\Hs.pdb
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.deps.json
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.dll
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.pdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\DiaHsView.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\ListaHS.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\MainPage.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\RecuperaPass.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\Registro.xaml.g.cs
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\ViewPruebas.xaml.g.cs
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.AssemblyInfoInputs.cache
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.AssemblyInfo.cs
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.deps.json
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.dll
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\bin\Debug\netstandard2.0\Hs.pdb
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.pdb
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Hs.csprojAssemblyReference.cache
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs\obj\Debug\netstandard2.0\Vistas\ViewPruebas.xaml.g.cs
