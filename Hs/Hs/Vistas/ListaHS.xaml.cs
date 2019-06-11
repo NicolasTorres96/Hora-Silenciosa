@@ -32,10 +32,11 @@ namespace Hs.Vistas
 			await cargaLista();
 		}
 
-		private void PreparaPantalla(UsuarioClass user)
+		private async void PreparaPantalla(UsuarioClass user)
 		{
 			lblSaludo.Text = "Hola " + user.nombreCompleto;
 			userGlobal = user;
+			await cargaLista();
 		}
 
 		private async Task cargaLista()

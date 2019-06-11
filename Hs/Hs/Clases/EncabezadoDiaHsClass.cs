@@ -6,10 +6,9 @@ namespace Hs.Clases
 {
     public class EncabezadoDiaHsClass
     {
-		public string diarut { get; set; }
 		public string dia { get; set; }
 		public string rut { get; set; }
-		public string realizada { get; set; }
 		public string cita { get; set; }
+		public string realizada { get; set; }
 	}
 }

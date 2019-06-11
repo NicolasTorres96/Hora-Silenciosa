@@ -113,4 +113,3 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPho
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.exe
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.pdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.dll.mdb
