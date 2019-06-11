@@ -22,8 +22,8 @@
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
                 <StackLayout Grid.Row="1" Padding="30,20">
-                    <Entry x:Name="txtRut" Placeholder="Rut (99999999-K)" Margin="0,40,0,0"></Entry>
-                    <Entry x:Name="txtContra" Placeholder="Contraseña" Margin="0,40,0,0" IsPassword="True"></Entry>
+                    <Entry x:Name="txtRut" Placeholder="Rut (99999999-K)" Margin="0,40,0,0" ></Entry>
+                    <Entry x:Name="txtContra" Placeholder="Contraseña" Margin="0,40,0,0" IsPassword="True" TextChanged="TxtContra_TextChanged"></Entry>
                     <Button  Text="Iniciar Sesión" BackgroundColor="#3897F0" BorderRadius="20" Clicked="IniciarSesion"/>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Olvidaste tu Contraseña?" TextColor="Black" >

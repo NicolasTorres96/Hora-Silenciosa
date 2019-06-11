@@ -19,9 +19,9 @@ namespace Hs.Vistas
 		private DiaHsData diaHsRest = new DiaHsData();
 		private UsuarioData usuarioRest = new UsuarioData();
 		private List<DiaHSClass> ls = new List<DiaHSClass>();
-		public DiaHsView (EncabezadoDiaHsClass encabezado)
+		public DiaHsView(EncabezadoDiaHsClass encabezado)
 		{
-			InitializeComponent ();
+			InitializeComponent();
 			encabezadoGlobal = encabezado;
 			cargaPantalla();
 		}
@@ -36,7 +36,9 @@ namespace Hs.Vistas
 
 		private async Task cargaReflexion()
 		{
-			txtReflexion.Text = await diaHsRest.TraerReflexion(encabezadoGlobal.dia+encabezadoGlobal.rut);
+			string reflexion = await diaHsRest.TraerReflexion(encabezadoGlobal.dia + encabezadoGlobal.rut);
+
+			txtReflexion.Text = reflexion;
 		}
 
 		private async Task cargaComentario()
@@ -60,10 +62,10 @@ namespace Hs.Vistas
 			diaReflexion.dia = encabezadoGlobal.dia;
 			diaReflexion.rut = encabezadoGlobal.rut;
 			UsuarioClass user = new UsuarioClass();
-			
+
 			resultado = await diaHsRest.RegistroReflexion(diaReflexion, encabezadoGlobal);
 			if (resultado == 1)
-			{				
+			{
 				await Navigation.PopModalAsync();
 				DependencyService.Get<Toast>().Show("Registro correcto");
 			}
@@ -73,6 +75,6 @@ namespace Hs.Vistas
 			}
 		}
 
-		
+
 	}
 }

@@ -32,7 +32,6 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.dll
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\netstandard.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Data.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Numerics.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Transactions.dll

@@ -26,21 +26,20 @@ namespace Hs.Vistas
 				usuario.rut = txtRut.Text;
 				usuario.contrasena = txtContra.Text;
 				usuario = await loginUser.LoginUsuario(usuario);
+				if (usuario != null)
+				{
+					var lista = new ListaHS(usuario);
+					await this.Navigation.PushModalAsync(lista);
+				}
+				else
+				{
+					DependencyService.Get<Toast>().Show("Usuario y/o Contraseña Incorrectos");
+				}
 			}
 			else
 			{
 				DependencyService.Get<Toast>().Show("Ingrese Contraseña");
-			}
-
-			if (usuario != null)
-			{
-				var lista = new ListaHS(usuario);
-				await this.Navigation.PushModalAsync(lista);
-			}
-			else
-			{
-				DependencyService.Get<Toast>().Show("Usuario y/o Contraseña Incorrectos");
-			}
+			}			
 		}
 		private void Registrarse(object sender, EventArgs e)
 		{
@@ -50,6 +49,15 @@ namespace Hs.Vistas
 		private void RecuperarPass(object sender, EventArgs e)
 		{
 			this.Navigation.PushModalAsync(new RecuperaPass());
+		}
+
+
+		private void TxtContra_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			if (txtContra.Text == "")
+			{
+				txtContra.Text = null;
+			}
 		}
 	}
 }

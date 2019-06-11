@@ -89,8 +89,7 @@ namespace Hs.Data
 			}
 			catch (Exception ex)
 			{
-				DependencyService.Get<Toast>().Show(ex.ToString());
-				return null;
+				return "";
 			}
 		}
 
