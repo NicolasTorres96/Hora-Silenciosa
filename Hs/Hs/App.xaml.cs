@@ -1,4 +1,5 @@
-﻿using Hs.Vistas;
+﻿using Hs.Utilidades;
+using Hs.Vistas;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,8 +12,17 @@ namespace Hs
 		public App()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+			//Se debe especificar este valor desde el inicio para posteriormente utilizar sin errores esta clase estatica
+			//ExceptionsMessages.app = this;
+			if (Variables_Globales.Usuario_Logeado())
+			{
+				//se redirige a pagina de login
+				MainPage = new ListaHS(Variables_Globales.Usuario_Actual);
+			}
+			else
+			{
+				MainPage = new MainPage();
+			}
 		}
 
 		protected override void OnStart()

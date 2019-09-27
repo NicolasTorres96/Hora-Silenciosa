@@ -57,6 +57,7 @@ C:\Users\Administrador\source\repos\Hs\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iO
 C:\Users\Administrador\source\repos\Hs\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.pdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.iOS.exe
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.iOS.pdb
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.pdb
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
@@ -112,5 +113,3 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPho
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.csproj.CopyComplete
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.exe
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\obj\iPhoneSimulator\Debug\Hs.iOS.pdb
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Newtonsoft.Json.dll
-C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.iOS\bin\iPhoneSimulator\Debug\Hs.dll.mdb

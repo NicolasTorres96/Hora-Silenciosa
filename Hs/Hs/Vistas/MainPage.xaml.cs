@@ -28,6 +28,7 @@ namespace Hs.Vistas
 				usuario = await loginUser.LoginUsuario(usuario);
 				if (usuario != null)
 				{
+					Variables_Globales.Usuario_Actual = usuario;
 					var lista = new ListaHS(usuario);
 					await this.Navigation.PushModalAsync(lista);
 				}

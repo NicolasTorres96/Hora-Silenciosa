@@ -1,6 +1,7 @@
 ﻿using Hs.Clases;
 using Hs.Utilidades;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -93,21 +94,22 @@ namespace Hs.Data
 			}
 		}
 
-		public async Task<List<EncabezadoDiaHsClass>> TraerEncabezado(string rut)
+		public async Task<EncabezadoDiaHsClass[]> TraerEncabezado(string rut)
 		{
 			try
 			{
 				string url_servicio = uri_servidor + "/EncabezadoDia/GrabaRelaciones/" + rut;
-				List < EncabezadoDiaHsClass> ls = new List<EncabezadoDiaHsClass>();
+				 EncabezadoDiaHsClass[] ls = null ;
 
 				//Envio solicitud
-				var response2 = await cliente.GetAsync(url_servicio);
+				var response2 = await cliente.GetAsync(url_servicio).ConfigureAwait(false);
 
 				//verifico respuesta
 				if (response2.IsSuccessStatusCode)
 				{
 					string contenido2 = await response2.Content.ReadAsStringAsync();
-					ls = JsonConvert.DeserializeObject< List<EncabezadoDiaHsClass>>(contenido2);
+					
+					ls = JsonConvert.DeserializeObject< EncabezadoDiaHsClass[]>(contenido2);
 				}
 				return ls;
 			}

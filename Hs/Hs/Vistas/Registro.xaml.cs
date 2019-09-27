@@ -25,10 +25,10 @@ namespace Hs.Vistas
 
 		private async void PreparaPantalla()
 		{
-			await cargaCombo();
+			await CargaCombo();
 		}
 
-		private async Task cargaCombo()
+		private async Task CargaCombo()
 		{
 			cboCB.ItemsSource = await clubesRest.ListarCB();
 			cboCB.ItemDisplayBinding = new Binding("Descripcion");
@@ -41,17 +41,20 @@ namespace Hs.Vistas
 			{
 				if (ValidaCampos())
 				{
-					UsuarioClass usuario = new UsuarioClass();
-					usuario.rut = txtRut.Text;
-					usuario.nombreCompleto = txtNombre.Text;
-					usuario.correo = txtCorreo.Text;
-					usuario.contrasena = txtContra.Text;
-					usuario.cb = (cboCB.SelectedItem as ClubBiblicoClass).Descripcion;
+					UsuarioClass usuario = new UsuarioClass
+					{
+						rut = txtRut.Text,
+						nombreCompleto = txtNombre.Text,
+						correo = txtCorreo.Text,
+						contrasena = txtContra.Text,
+						cb = (cboCB.SelectedItem as ClubBiblicoClass).Descripcion
+					};
 
 					resultado = await registroUser.RegistroUsuario(usuario);
 					if (resultado == 1)
 					{
 						DependencyService.Get<Toast>().Show("Registro correcto");
+						await Navigation.PopModalAsync();
 					}
 					else
 					{

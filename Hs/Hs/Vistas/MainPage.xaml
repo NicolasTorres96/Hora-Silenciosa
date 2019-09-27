@@ -20,7 +20,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>
+               <!-- <Image Grid.Row="0" Source="pdvLogo.png" HeightRequest="100" VerticalOptions="End"></Image>-->
                 <StackLayout Grid.Row="1" Padding="30,20">
                     <Entry x:Name="txtRut" Placeholder="Rut (99999999-K)" Margin="0,40,0,0" ></Entry>
                     <Entry x:Name="txtContra" Placeholder="Contraseña" Margin="0,40,0,0" IsPassword="True" TextChanged="TxtContra_TextChanged"></Entry>

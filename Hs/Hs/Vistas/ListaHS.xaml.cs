@@ -19,33 +19,28 @@ namespace Hs.Vistas
 	{
 		public ObservableCollection<EncabezadoDiaHsClass> Items { get; set; }
 		public DiaHsData diasHsRest = new DiaHsData();
-		public List<EncabezadoDiaHsClass> ls = new List<EncabezadoDiaHsClass>();
+		public EncabezadoDiaHsClass[] ls = null;
 		public UsuarioClass userGlobal = new UsuarioClass();
 		public ListaHS(UsuarioClass user)
 		{
 			InitializeComponent();
-			PreparaPantalla(user);
+			lblSaludo.Text = "Hola " + user.nombreCompleto;
+			userGlobal = user;
 		}
 		protected async override void OnAppearing()
 		{
 			base.OnAppearing();
-			await cargaLista();
+			await CargaLista();
 		}
 
-		private async void PreparaPantalla(UsuarioClass user)
-		{
-			lblSaludo.Text = "Hola " + user.nombreCompleto;
-			userGlobal = user;
-			await cargaLista();
-		}
 
-		private async Task cargaLista()
+		private async Task CargaLista()
 		{
 			ls = await diasHsRest.TraerEncabezado(userGlobal.rut);
-			llenaLista(ls);
+			LlenaLista(ls);
 		}
 
-		private void llenaLista(List<EncabezadoDiaHsClass> ls)
+		private void LlenaLista(EncabezadoDiaHsClass[] ls)
 		{
 			Items = new ObservableCollection<EncabezadoDiaHsClass>();
 			foreach (EncabezadoDiaHsClass item in ls)
@@ -68,7 +63,13 @@ namespace Hs.Vistas
 		{
 			var palabra = sbBuscadorDia.Text;
 
-			MyListView.ItemsSource = Items.Where(encabezado => encabezado.dia.ToLower().Contains(palabra));
+			MyListView.ItemsSource = Items.Where(encabezado => encabezado.Dia.ToLower().Contains(palabra));
+		}
+		public async void CerrarSesion(object sender, EventArgs args)
+		{
+			Variables_Globales.Usuario_Actual = null;
+			var login = new MainPage();
+			await this.Navigation.PushModalAsync(login);
 		}
 	}
 }

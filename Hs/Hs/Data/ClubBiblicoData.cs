@@ -20,7 +20,7 @@ namespace Hs.Data
 				List<ClubBiblicoClass> ls = new List<ClubBiblicoClass>();
 
 				//Envio solicitud
-				var response2 = await cliente.GetAsync(url_servicio);
+				var response2 = await cliente.GetAsync(url_servicio).ConfigureAwait(false);
 
 				//verifico respuesta
 				if (response2.IsSuccessStatusCode)

@@ -23,30 +23,30 @@ namespace Hs.Vistas
 		{
 			InitializeComponent();
 			encabezadoGlobal = encabezado;
-			cargaPantalla();
+			CargaPantalla();
 		}
 
-		private async void cargaPantalla()
+		private async void CargaPantalla()
 		{
-			lblCita.Text = encabezadoGlobal.cita;
-			lblDia.Text = encabezadoGlobal.dia;
-			await cargaComentario();
-			await cargaReflexion();
+			lblCita.Text = encabezadoGlobal.Cita;
+			lblDia.Text = encabezadoGlobal.Dia;
+			await CargaComentario();
+			await CargaReflexion();
 		}
 
-		private async Task cargaReflexion()
+		private async Task CargaReflexion()
 		{
-			string reflexion = await diaHsRest.TraerReflexion(encabezadoGlobal.dia + encabezadoGlobal.rut);
+			string reflexion = await diaHsRest.TraerReflexion(encabezadoGlobal.Dia + encabezadoGlobal.Rut);
 
 			txtReflexion.Text = reflexion;
 		}
 
-		private async Task cargaComentario()
+		private async Task CargaComentario()
 		{
 			ls = await diaHsRest.TraerDiasHs();
 			foreach (DiaHSClass item in ls)
 			{
-				if (item.dia == encabezadoGlobal.dia)
+				if (item.dia == encabezadoGlobal.Dia)
 				{
 					lblComentario.Text = item.comentario;
 				}
@@ -56,20 +56,37 @@ namespace Hs.Vistas
 		private async void BtnEnviar_Clicked(object sender, EventArgs e)
 		{
 			int resultado = 0;
-			DiaHsUserClass diaReflexion = new DiaHsUserClass();
-			diaReflexion.reflexion = txtReflexion.Text;
-			diaReflexion.diarut = encabezadoGlobal.dia + encabezadoGlobal.rut;
-			diaReflexion.dia = encabezadoGlobal.dia;
-			diaReflexion.rut = encabezadoGlobal.rut;
-			UsuarioClass user = new UsuarioClass();
 
-			resultado = await diaHsRest.RegistroReflexion(diaReflexion, encabezadoGlobal);
-			if (resultado == 1)
+			try
 			{
-				await Navigation.PopModalAsync();
-				DependencyService.Get<Toast>().Show("Registro correcto");
+				if (txtReflexion.Text.Trim().Length > 0)
+				{
+					DiaHsUserClass diaReflexion = new DiaHsUserClass
+					{
+						reflexion = txtReflexion.Text,
+						diarut = encabezadoGlobal.Dia + encabezadoGlobal.Rut,
+						dia = encabezadoGlobal.Dia,
+						rut = encabezadoGlobal.Rut
+					};
+					UsuarioClass user = new UsuarioClass();
+
+					resultado = await diaHsRest.RegistroReflexion(diaReflexion, encabezadoGlobal);
+					if (resultado == 1)
+					{
+						await Navigation.PopModalAsync();
+						DependencyService.Get<Toast>().Show("Registro correcto");
+					}
+					else
+					{
+						DependencyService.Get<Toast>().Show("Error en el Registro");
+					}
+				}
+				else
+				{
+					DependencyService.Get<Toast>().Show("La hs no puede ser vacia");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
 				DependencyService.Get<Toast>().Show("Error en el Registro");
 			}
