@@ -31,7 +31,7 @@ namespace Hs.Vistas
 		private async Task CargaCombo()
 		{
 			cboCB.ItemsSource = await clubesRest.ListarCB();
-			cboCB.ItemDisplayBinding = new Binding("Descripcion");
+			cboCB.ItemDisplayBinding = new Binding("descripcion");
 		}
 
 		public async void Registrarse(object sender, EventArgs args)
@@ -47,7 +47,7 @@ namespace Hs.Vistas
 						nombreCompleto = txtNombre.Text,
 						correo = txtCorreo.Text,
 						contrasena = txtContra.Text,
-						cb = (cboCB.SelectedItem as ClubBiblicoClass).Descripcion
+						cb = (cboCB.SelectedItem as ClubBiblicoClass).descripcion
 					};
 
 					resultado = await registroUser.RegistroUsuario(usuario);

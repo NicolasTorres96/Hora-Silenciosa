@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hs.Vistas.ViewPruebas">
     <ContentPage.Content>
-        <StackLayout>
-            <Editor />
+        <StackLayout >
+            <Image Source="cbLogo.png" 
+               BackgroundColor="#4D111B" 
+               VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

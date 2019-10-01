@@ -31,8 +31,58 @@ namespace Hs.Vistas
 		{
 			base.OnAppearing();
 			await CargaLista();
+			HacerHsDelDia();
+			CargarCombo();
 		}
 
+		private void CargarCombo()
+		{
+			String[] Meses = { "Todos", "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+			cboMeses.ItemsSource = Meses;
+		}
+
+		private async void HacerHsDelDia()
+		{
+			String[] fecha;
+			String fechaFormateada;
+			foreach (var item in Items)
+			{
+				fecha = item.dia.Split('-');
+				if (int.Parse(fecha[1]) < 10)
+				{
+					if (int.Parse(fecha[2]) < 10)
+					{
+						fechaFormateada = fecha[2].Replace('0', ' ').Trim() + "/" + fecha[1].Replace('0', ' ').Trim() + "/" + fecha[0];
+					}
+					else
+					{
+						fechaFormateada = fecha[2] + "/" + fecha[1].Replace('0', ' ').Trim() + "/" + fecha[0];
+					}
+					
+				}
+				else
+				{
+					if (int.Parse(fecha[2]) < 10)
+					{
+						fechaFormateada = fecha[2].Replace('0', ' ').Trim() + "/" + fecha[1] + "/" + fecha[0];
+					}
+					else
+					{
+						fechaFormateada = fecha[2] + "/" + fecha[1] + "/" + fecha[0];
+					}
+					
+				}
+
+				if (fechaFormateada.Equals(DateTime.Now.ToShortDateString()) && !item.realizada.Equals("lista.png"))
+				{
+					var ans = await DisplayAlert("Hola " + Variables_Globales.Usuario_Actual.nombreCompleto, "Quieres Hacer la HS del dia?", "Si", "No");
+					if (ans)
+					{
+						await this.Navigation.PushModalAsync(new DiaHsView(item));
+					}
+				}
+			}
+		}
 
 		private async Task CargaLista()
 		{
@@ -59,17 +109,39 @@ namespace Hs.Vistas
 		}
 
 
-		private void SbBuscadorDia_TextChanged(object sender, TextChangedEventArgs e)
+		/*private void SbBuscadorDia_TextChanged(object sender, TextChangedEventArgs e)
 		{
 			var palabra = sbBuscadorDia.Text;
 
-			MyListView.ItemsSource = Items.Where(encabezado => encabezado.Dia.ToLower().Contains(palabra));
-		}
+			MyListView.ItemsSource = Items.Where(encabezado => encabezado.dia.ToLower().Contains(palabra));
+		}*/
 		public async void CerrarSesion(object sender, EventArgs args)
 		{
 			Variables_Globales.Usuario_Actual = null;
 			var login = new MainPage();
 			await this.Navigation.PushModalAsync(login);
+		}
+
+		private void cboMeses_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			if (cboMeses.SelectedIndex == 0)
+			{
+				MyListView.ItemsSource = Items;
+			}
+			else
+			{
+				ObservableCollection<EncabezadoDiaHsClass> ItemsFiltrados = new ObservableCollection<EncabezadoDiaHsClass>();
+				String[] fecha;				
+				foreach (var item in Items)
+				{
+					fecha = item.dia.Split('-');					
+					if (int.Parse(fecha[1]) == cboMeses.SelectedIndex)
+					{
+						ItemsFiltrados.Add(item);
+					}
+				}
+				MyListView.ItemsSource = ItemsFiltrados;
+			}
 		}
 	}
 }

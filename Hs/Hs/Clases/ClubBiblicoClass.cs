@@ -7,12 +7,13 @@ namespace Hs.Clases
 {
     public class ClubBiblicoClass
     {
-		[JsonProperty("_id")]
-		private int _id;
-		[JsonProperty("_descripcion")]
-		private string _descripcion;
+		public int id { get; set; }
+		public string descripcion { get; set; }
 
-		public int Id { get => _id; set => _id = value; }
-		public string Descripcion { get => _descripcion; set => _descripcion = value; }
+		public ClubBiblicoClass(int id,string descripcion)
+		{
+			this.id = id;
+			this.descripcion = descripcion;
+		}
 	}
 }

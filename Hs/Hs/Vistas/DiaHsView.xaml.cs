@@ -28,15 +28,15 @@ namespace Hs.Vistas
 
 		private async void CargaPantalla()
 		{
-			lblCita.Text = encabezadoGlobal.Cita;
-			lblDia.Text = encabezadoGlobal.Dia;
+			lblCita.Text = encabezadoGlobal.cita;
+			lblDia.Text = encabezadoGlobal.dia;
 			await CargaComentario();
 			await CargaReflexion();
 		}
 
 		private async Task CargaReflexion()
 		{
-			string reflexion = await diaHsRest.TraerReflexion(encabezadoGlobal.Dia + encabezadoGlobal.Rut);
+			string reflexion = await diaHsRest.TraerReflexion(encabezadoGlobal.dia + encabezadoGlobal.rut);
 
 			txtReflexion.Text = reflexion;
 		}
@@ -46,7 +46,7 @@ namespace Hs.Vistas
 			ls = await diaHsRest.TraerDiasHs();
 			foreach (DiaHSClass item in ls)
 			{
-				if (item.dia == encabezadoGlobal.Dia)
+				if (item.dia == encabezadoGlobal.dia)
 				{
 					lblComentario.Text = item.comentario;
 				}
@@ -64,9 +64,9 @@ namespace Hs.Vistas
 					DiaHsUserClass diaReflexion = new DiaHsUserClass
 					{
 						reflexion = txtReflexion.Text,
-						diarut = encabezadoGlobal.Dia + encabezadoGlobal.Rut,
-						dia = encabezadoGlobal.Dia,
-						rut = encabezadoGlobal.Rut
+						diarut = encabezadoGlobal.dia + encabezadoGlobal.rut,
+						dia = encabezadoGlobal.dia,
+						rut = encabezadoGlobal.rut
 					};
 					UsuarioClass user = new UsuarioClass();
 

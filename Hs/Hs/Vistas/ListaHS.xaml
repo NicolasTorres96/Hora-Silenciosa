@@ -2,21 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hs.Vistas.ListaHS">
-    <StackLayout>        
+    <StackLayout BackgroundColor="#4D111B">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>                               
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label x:Name="lblSaludo" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" Margin="10" FontSize="Medium"></Label>
-            <SearchBar x:Name="sbBuscadorDia" Grid.Column="0" Grid.Row="1" Placeholder="Dia" TextChanged="SbBuscadorDia_TextChanged"/>
-            <Button Margin="0,5,0,0"  BackgroundColor="#3897F0" BorderRadius="10" Grid.Column="1" Grid.Row="0" Text="Cerrar Sesión" Clicked="CerrarSesion" FontSize="Micro"/>
+            <Label TextColor="#FF000000" BackgroundColor="Transparent"  x:Name="lblSaludo" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" Margin="10" FontSize="Medium"></Label>
+            <Button Margin="0,5,0,0" TextColor="White"  BackgroundColor="#FF000000" BorderRadius="10" Grid.Column="1" Grid.Row="0" Text="Cerrar Sesión" Clicked="CerrarSesion" FontSize="Micro"/>
+            <Picker TextColor="#FF000000" BackgroundColor="Transparent" x:Name="cboMeses" Title="Filtro Meses" Margin="0,2.5" Grid.Column="0" Grid.Row="1" SelectedIndexChanged="cboMeses_SelectedIndexChanged" TitleColor="#FF000000" />
+            <!--<SearchBar x:Name="sbBuscadorDia" Grid.Column="0" Grid.Row="1" Placeholder="Dia" TextChanged="SbBuscadorDia_TextChanged"/>-->
+            
         </Grid>
-        <ListView x:Name="MyListView" ItemTapped="Handle_ItemTapped" CachingStrategy="RecycleElement">
+        <ListView x:Name="MyListView"
+                  ItemTapped="Handle_ItemTapped"
+                  CachingStrategy="RecycleElement"
+                  BackgroundColor="Transparent">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Height="60" >
@@ -29,8 +34,8 @@
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Label x:Name="lblDia" Grid.Column="0" HorizontalOptions="Start" Text="{Binding dia}" Margin="5"></Label>
-                            <Label x:Name="lblCita" Grid.Column="1" Text="{Binding cita}" VerticalTextAlignment="Center" Margin="5"/>
+                            <Label TextColor="#FF000000" x:Name="lblDia" Grid.Column="0" HorizontalOptions="Start" Text="{Binding dia}" Margin="5"></Label>
+                            <Label TextColor="#FF000000" x:Name="lblCita" Grid.Column="1" Text="{Binding cita}" VerticalTextAlignment="Center" Margin="5"/>
                             <Image x:Name="imgListo" Grid.Column="2" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Source="{Binding realizada}" />
                         </Grid>
                     </ViewCell>

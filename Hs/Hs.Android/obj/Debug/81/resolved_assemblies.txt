@@ -17,6 +17,7 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Compat.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Core.UI.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Core.Utils.dll
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.CustomTabs.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Design.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Fragment.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\Xamarin.Android.Support.Media.Compat.dll
@@ -35,6 +36,7 @@ C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Data.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Numerics.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Transactions.dll
+C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.Drawing.Common.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.IO.Compression.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\Administrador\Desktop\Proyectos Nico\Hora-Silenciosa\Hs\Hs.Android\obj\Debug\81\android\assets\System.ComponentModel.Composition.dll

@@ -16,7 +16,7 @@ namespace Hs.Vistas {
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Vistas\\ViewPruebas.xaml")]
     public partial class ViewPruebas : global::Xamarin.Forms.ContentPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ViewPruebas));
         }

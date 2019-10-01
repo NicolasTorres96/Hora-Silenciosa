@@ -3,6 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>HUAWEI RNE-L03</SelectedDevice>
     <DefaultDevice>Pixel_2_API_28</DefaultDevice>
-    <AndroidDesignerPreferredTheme>Theme.DeviceDefault.NoActionBar.Fullscreen</AndroidDesignerPreferredTheme>
+    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
